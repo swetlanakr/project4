@@ -23,28 +23,39 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
+## Requsted Files
+
+* requirements.txt: dependencies to be installed.
+* app.py: The python API starter source code.
+* Dockerfile: definition of the container content.
+* Makefile: the definition of the helper commands.
+* output_txt_files: requested outputs are available in the this directory.  docker_out.txt and kubernetes_out.txt are the requested files
+
 ## Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
-```bash
-python3 -m pip install --user virtualenv
-# You should have Python 3.7 available in your host. 
-# Check the Python path using `which python3`
-# Use a command similar to this one:
 python3 -m virtualenv --python=<path-to-Python3.7> .devops
+* Activate the environment
 source .devops/bin/activate
-```
 * Run `make install` to install the necessary dependencies
+* Run `make lint`to run lint checks on the project code
+* Install hadolint if necessary
+* Install minikube
 
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+2. Run in Docker:  
+    * Complete Dockerfile
+    * Complete and execute run_docker.sh by "./run_docker.sh"
+    * Test it by making a prediction: "./make_prediction.sh". Please be aware to use an extra terminal for this command!
+    * Upload docker image by completing upload_docker.sh and executing it with "./make_prediction.sh"
+
 
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+* Setup and Configure Kubernetes locally by starting Minikube with the command "Minikube start --vm-driver=none" 
+* Check if a cluster is running with "kubectl config view"
+* execute the file "run_kubernetes.sh" to get it running 
+* Make a prediction
