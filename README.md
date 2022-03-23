@@ -48,13 +48,14 @@ source .devops/bin/activate
 2. Run in Docker:  
     * Complete Dockerfile
     * Complete and execute run_docker.sh by "./run_docker.sh"
-    * Test it by making a prediction: "./make_prediction.sh"
+    * Test it by making a prediction: "./make_prediction.sh". Please be aware to use an extra terminal for this command!
     * Upload docker image by completing upload_docker.sh and executing it with "./make_prediction.sh"
-4. Run in Kubernetes:  `./run_kubernetes.sh`
+
 
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+* Setup and Configure Kubernetes locally by starting Minikube with the command "Minikube start --vm-driver=none" 
+* Check if a cluster is running with "kubectl config view"
+* execute the file "run_kubernetes.sh" to get it running 
+* Make a prediction
