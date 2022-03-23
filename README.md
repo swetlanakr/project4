@@ -23,7 +23,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
-## Reqeusted Files
+## Requsted Files
 
 * requirements.txt: dependencies to be installed.
 * app.py: The python API starter source code.
