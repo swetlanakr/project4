@@ -6,3 +6,12 @@ Forwarding from 127.0.0.1:8080 -> 80
 Forwarding from [::1]:8080 -> 80
 Handling connection for 8080
 Handling connection for 8080
+
+#Output from running ./make_prediction.sh
+voclabs:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./make_prediction.sh 
+Port: 8080
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
